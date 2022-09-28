@@ -20,7 +20,5 @@ int main(void)
 
 	distance = sqrt((double)((pos1.xpos - pos2.xpos) * (pos1.xpos - pos2.xpos)) +
 		(double)((pos1.ypos - pos2.ypos) * (pos1.ypos - pos2.ypos)));
-	printf("ë‘ ì ì˜ ê±°ë¦¬ëŠ” %gì…ë‹ˆë‹¤. \n", distance);
-
-	return 0;
+	printf("µÎ Á¡ÀÇ °Å¸®´Â %gÀÔ´Ï´Ù. \n", distance);
 }
