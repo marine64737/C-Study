@@ -1,24 +1,27 @@
 #include <stdio.h>
-#include <math.h>
+#include <string.h>
 
-struct point
+struct employee
 {
-	int xpos;
-	int ypos;
+	char name[20];
+	char registration[20];
+	int salary;
 };
 
 int main(void)
 {
-	struct point pos1, pos2;
-	double distance;
-
-	fputs("point1 pos: ", stdout);
-	scanf("%d %d", &pos1.xpos, &pos1.ypos);
+	struct employee man[3];
+	for (int i = 0; i < 3; i++) {
+		printf("직원 %d 이름 입력: ", i + 1); scanf_s("%s", man[i].name, sizeof(man[i].name));
+		printf("직원 %d 주민번호 입력: ", i + 1); scanf_s("%s", man[i].registration, sizeof(man[i].registration));
+		printf("직원 %d 급여정보 입력: ", i + 1); scanf_s("%d", &man[i].salary);
+	}
 	
-	fputs("point2 pos: ", stdout);
-	scanf("%d %d", &pos2.xpos, &pos2.ypos);
+	for (int i = 0; i < 3; i++) {
+		printf("이름: %s\n", man[i].name);
+		printf("번호: %s\n", man[i].registration);
+		printf("나이: %d\n", man[i].salary);
+	}
 
-	distance = sqrt((double)((pos1.xpos - pos2.xpos) * (pos1.xpos - pos2.xpos)) +
-		(double)((pos1.ypos - pos2.ypos) * (pos1.ypos - pos2.ypos)));
-	printf("두 점의 거리는 %g입니다. \n", distance);
+
 }
