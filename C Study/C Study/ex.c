@@ -23,5 +23,5 @@ int main(void)
 		printf("³ªÀÌ: %d\n", man[i].salary);
 	}
 
-
+	return 0;
 }
