@@ -19,8 +19,8 @@ int main(void)
 	
 	for (int i = 0; i < 3; i++) {
 		printf("이름: %s\n", man[i].name);
-		printf("번호: %s\n", man[i].registration);
-		printf("나이: %d\n", man[i].salary);
+		printf("주민번호: %s\n", man[i].registration);
+		printf("급여정보: 월 %d만 원\n", man[i].salary);
 	}
 
 	return 0;
