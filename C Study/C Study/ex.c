@@ -5,6 +5,7 @@ typedef struct
 	int xpos;
 	int ypos;
 } Point;
+111
 
 void SwipePoint(Point* x, Point* y)
 {
