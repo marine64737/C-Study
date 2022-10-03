@@ -6,11 +6,15 @@ typedef struct
 	int ypos;
 } Point;
 
-void SwipePoint(Point* x, Point* y)
+typedef struct
 {
-	Point temp = *x;
-	*x = *y;
-	*y = temp;
+	Point p1;
+	Point p2;
+} Rectangle;
+
+void ShowArea(Rectangle * r)
+{
+	printf("Area: %d\n", (r->p2.xpos - r->p1.xpos) * (r->p2.ypos - r->p1.ypos));
 }
 
 int main(void)
