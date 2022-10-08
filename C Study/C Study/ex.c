@@ -17,15 +17,17 @@ void ShowArea(Rectangle * r)
 	printf("Area: %d\n", (r->p2.xpos - r->p1.xpos) * (r->p2.ypos - r->p1.ypos));
 }
 
+void ShowPosition(Rectangle * r)
+{
+	printf("[%d, %d], [%d, %d], [%d, %d], [%d, %d]\n", 
+		r->p1.xpos, r->p1.ypos, r->p2.xpos, r->p1.ypos,
+		r->p1.xpos, r->p2.ypos, r->p2.xpos, r->p2.ypos);
+}
+
 int main(void)
 {
-	Point pos1 = { 2,4 };
-	Point pos2 = { 5,7 };
-	printf("pos1: [%d, %d]\n", pos1.xpos, pos1.ypos);
-	printf("pos2: [%d, %d]\n", pos2.xpos, pos2.ypos);
-
-	SwipePoint(&pos1, &pos2);
-	printf("pos1: [%d, %d]\n", pos1.xpos, pos1.ypos);
-	printf("pos2: [%d, %d]\n", pos2.xpos, pos2.ypos);
+	Rectangle r = { 2,4,5,7 };
+	ShowArea(&r);
+	ShowPosition(&r);
 	return 0;
 }
