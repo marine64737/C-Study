@@ -22,7 +22,7 @@ void ShowPosition(Rectangle * r)
 	printf("[%d, %d], [%d, %d], [%d, %d], [%d, %d]\n", 
 		r->p1.xpos, r->p1.ypos, r->p2.xpos, r->p1.ypos,
 		r->p1.xpos, r->p2.ypos, r->p2.xpos, r->p2.ypos);
-}
+} 
 
 int main(void)
 {
